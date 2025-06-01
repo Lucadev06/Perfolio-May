@@ -1,4 +1,4 @@
-import { Box, Button, Drawer, IconButton, Tooltip, Typography } from "@mui/material";
+import { Box, Button, Drawer, IconButton, Tooltip } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
