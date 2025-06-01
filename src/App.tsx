@@ -1,32 +1,33 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Header } from "./components/Header"
+import { Box } from '@mui/material';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Inicio } from "./components/inicio/Inicio";
+import { SobreMi } from "./components/sobreMi/SobreMi";
+import { Polaroids } from "./components/polaroids/Polaroids";
+import { Footer } from "./components/Footer";
+import { Contacto } from "./components/contacto/Contacto";
 
 
-function App() {
+export const App = () => {
   return (
-    <>
-      {/* Imagen arriba ocupando 100% del ancho */}
-      <Box component="header" sx={{ width: '100%' }}>
-        <img
-          src="/principal.jpeg" // corregido: sin `./public`
-          alt="principal"
-          style={{ width: '100%', height: 'auto', display: 'block' }}
-        />
+    <BrowserRouter>
+      {/* Header siempre visible */}
+      <Box >
+       <Header />
       </Box>
 
-      {/* Contenido centrado debajo */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '80vh',
-        }}
-      >
-        <Typography variant="h4">Bienvenido</Typography>
-        <Button variant="contained">Acceder</Button>
-      </Box>
-    </>
+      {/* Rutas que cambian */}
+      <Routes>
+        <Route path="/" element={<Navigate to="/inicio" replace />} />
+        <Route path="/inicio" element={<Inicio />} />
+        <Route path="/sobreMi" element={<SobreMi />} />
+        <Route path="/polaroids" element={<Polaroids />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
+
+      {/* Footer siempre visible */}
+      <Footer />
+    </BrowserRouter>
   );
 }
 

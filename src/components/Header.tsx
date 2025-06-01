@@ -1,0 +1,101 @@
+import { Box, Button, Drawer, IconButton, Tooltip, Typography } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+export const Header = () => {
+  const navigate = useNavigate();
+  const redirect = (ruta: string) => {
+    navigate(ruta);
+  };
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  return (
+    <>
+      {/* Header superior */}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "1rem",
+         backgroundColor: "transparent",
+          boxSizing: "border-box",
+        }}
+      >
+        {/* Logo a la izquierda */}
+        <Box sx={{ width: "33%", display: "flex", alignItems: "center" }}>
+          <Tooltip title="Mayara Lobo">
+            <img src="/logo.png" alt="Logo" style={{ height: "40px", objectFit: "contain" }} />
+          </Tooltip>
+        </Box>
+
+        {/* Menú hamburguesa a la derecha */}
+        <Box sx={{ width: "33%", display: "flex", justifyContent: "flex-end" }}>
+          <IconButton onClick={() => setIsDrawerOpen(true)}>
+            <MenuIcon sx={{ color: "black" }} />
+          </IconButton>
+        </Box>
+      </Box>
+
+      {/* Drawer inferior que ocupa todo el ancho y 50% de alto */}
+      <Drawer
+        anchor="bottom"
+        open={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: "black",
+            color: "white",
+            width: "100%",
+            height: "50%",
+          },
+        }}
+      >
+        {/* Encabezado del Drawer */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "1rem",
+          }}
+        >
+          <Tooltip title="Luca Simonazzi">
+            <img src="/logo.png" alt="Logo" style={{ height: "40px" }} />
+          </Tooltip>
+          <IconButton onClick={() => setIsDrawerOpen(false)}>
+            <CloseIcon sx={{ color: "white" }} />
+          </IconButton>
+        </Box>
+
+        {/* Menú de navegación */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            padding: "1rem 2rem",
+            gap: "1rem",
+          }}
+        >
+          <Button variant="text" sx={{ color: "white" }} onClick={() => { redirect("/inicio"); setIsDrawerOpen(false); }}>
+            Inicio
+          </Button>
+          <Button variant="text" sx={{ color: "white" }} onClick={() => { redirect("/sobreMi"); setIsDrawerOpen(false); }}>
+            Sobre mí
+          </Button>
+          <Button variant="text" sx={{ color: "white" }} onClick={() => { redirect("/polaroids"); setIsDrawerOpen(false); }}>
+            Polaroids
+          </Button>
+          <Button variant="text" sx={{ color: "white" }} onClick={() => { redirect("/contacto"); setIsDrawerOpen(false); }}>
+            Contacto
+          </Button>
+        </Box>
+      </Drawer>
+    </>
+  );
+};
