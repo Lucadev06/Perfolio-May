@@ -16,16 +16,20 @@ export const Header = () => {
     <>
       {/* Header superior */}
       <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "1rem",
-         backgroundColor: "transparent",
-          boxSizing: "border-box",
-        }}
-      >
+  sx={{
+    position: "absolute", // o "fixed" si querés que quede mientras hacés scroll
+    top: 0,
+    left: 0,
+    width: "90%",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "1rem",
+    // semitransparente
+    zIndex: 1000,
+  }}
+>
+
         {/* Logo a la izquierda */}
         <Box sx={{ width: "33%", display: "flex", alignItems: "center" }}>
           <Tooltip title="Mayara Lobo">

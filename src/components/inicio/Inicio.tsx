@@ -3,9 +3,7 @@ import { Box, Typography } from '@mui/material';
 export const Inicio = () => {
   return (
     <>
-      {/* Contenedor que incluye imagen y texto superpuesto */}
       <Box component="header" sx={{ position: 'relative', width: '100%' }}>
-        
         {/* Texto encima de la imagen, en columna */}
         <Box
           sx={{
@@ -20,29 +18,40 @@ export const Inicio = () => {
           }}
         >
           <Typography
-            variant="h3"
+            variant="h1"
             sx={{
+              fontFamily: "'Inter', sans-serif",
               color: 'black',
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 600,
+              fontSize: {
+                xs: '3.5rem',   // mobile
+                sm: '5rem',   // tablets
+                md: '6rem',   // desktop
+                lg: '6.5rem',   // grandes
+              },
+
             }}
           >
             Mayara
           </Typography>
           <Typography
-            variant="h3"
+            variant="h1"
             sx={{
+              fontFamily: "'Inter', sans-serif",
               color: 'black',
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 600,
-              paddingLeft: '1rem', // sangría visual
+               fontSize: {
+                xs: '3.5rem',   // mobile
+                sm: '5rem',   // tablets
+                md: '6rem',   // desktop
+                lg: '6.5rem',  // grandes
+              },
+              
+              paddingLeft: '1rem', // si querés mantener el "tab" visual
             }}
           >
             Lobo
           </Typography>
         </Box>
 
-        {/* Imagen de fondo */}
         <img
           src="/principal2.jpeg"
           alt="principal"
