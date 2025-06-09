@@ -14,12 +14,9 @@ export  const  Footer = () => {
       justifyContent: "center",
       alignItems: "center",
       padding: "1rem",
-      gap: "1rem",
       backgroundColor: "black", // Fondo
-      borderRadius: "1rem",
       boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.2)", // Sombra sutil para destacar
-      marginTop: "1rem", // Espacio entre el contenido y el footer
-  
+       width: "100%",
     }}
   >
     <Box
