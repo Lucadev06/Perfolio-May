@@ -65,7 +65,8 @@ export const Contacto = () => {
         component="form"
         onSubmit={handleSubmit}
         sx={{
-         
+         width: "100%",
+                                maxWidth: "400px",
        
           display: "flex",
           flexDirection: "column",

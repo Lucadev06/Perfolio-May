@@ -14,42 +14,63 @@ export const Header = () => {
 
   return (
     <>
-      {/* Header superior */}
+
       <Box
-  sx={{
-    position: "absolute", // o "fixed" si querés que quede mientras hacés scroll
-    top: 0,
-    left: 0,
-    width: "90%",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "1rem",
-    // semitransparente
-    zIndex: 1000,
-  }}
->
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "90%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "1rem",
+          // semitransparente
+          zIndex: 1000,
+        }}
+      >
 
         {/* Logo a la izquierda */}
         <Box sx={{ width: "33%", display: "flex", alignItems: "center" }}>
           <Tooltip title="Mayara Lobo">
-            <img src="/logo.png" alt="Logo" style={{ height: "40px", objectFit: "contain" }} />
+            <img src="/logo.png" alt="Logo" style={{ height: "40px", objectFit: "contain", marginLeft: "2rem" }} />
           </Tooltip>
         </Box>
 
         {/* Menú hamburguesa a la derecha */}
         <Box sx={{ width: "33%", display: "flex", justifyContent: "flex-end" }}>
-          <IconButton onClick={() => setIsDrawerOpen(true)}>
+          <IconButton
+            onClick={() => setIsDrawerOpen(true)}
+            disableRipple
+            sx={{
+              '&:focus-visible': {
+                outline: 'none',
+                boxShadow: 'none',
+              },
+              '&:focus': {
+                outline: 'none',
+                boxShadow: 'none',
+              },
+              '&:active': {
+                transform: 'none',
+              },
+            }}
+          >
             <MenuIcon sx={{ color: "black" }} />
           </IconButton>
+
+
         </Box>
       </Box>
 
-      {/* Drawer inferior que ocupa todo el ancho y 50% de alto */}
       <Drawer
         anchor="bottom"
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
+        ModalProps={{
+          keepMounted: true,
+          disableScrollLock: true,
+        }}
         PaperProps={{
           sx: {
             backgroundColor: "black",
@@ -59,6 +80,7 @@ export const Header = () => {
           },
         }}
       >
+
         {/* Encabezado del Drawer */}
         <Box
           sx={{
