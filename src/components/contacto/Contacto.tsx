@@ -22,7 +22,7 @@ export const Contacto = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    
+                      backgroundColor: "white",
                     padding: 2,
                 }}
             >
@@ -56,7 +56,7 @@ export const Contacto = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                
+                backgroundColor: "white",
                 padding: "2rem 1rem",
                 width: "100%",
             }}
@@ -81,6 +81,7 @@ export const Contacto = () => {
                         fontWeight: "bold",
                         fontSize: { xs: "2rem", sm: "2.5rem" },
                     }}
+                    color= "black"
                 >
                     Contactame
                 </Typography>
