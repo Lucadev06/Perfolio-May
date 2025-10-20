@@ -1,55 +1,44 @@
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { SiTiktok } from "react-icons/si";
+import { Box, Typography } from "@mui/material";
 
-import { Button, Box, Tooltip } from "@mui/material";
-
-export  const  Footer = () => {
+export const Footer = () => {
   return (
-    
     <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      padding: "1rem",
-      backgroundColor: "black", // Fondo
-      boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.2)", // Sombra sutil para destacar
-       width: "100%",
-    }}
-  >
-    <Box
+      id="contacto"
       sx={{
         display: "flex",
-        justifyContent: "right",
+        flexDirection: "column",
+        justifyContent: "center",
         alignItems: "center",
-        gap: "0.5rem",
+        p: "2rem 1rem",
+        backgroundColor: "black",
+        color: "white",
+        width: "100%",
+        textAlign: "center",
       }}
     >
-      <Button>
-        <Tooltip title="Hablanos y cotiza tu sueño">
-          <a href="https://wa.me/5491154092819" target="_blank">
-            <WhatsAppIcon sx={{color: "white"}}/>
-          </a>
-        </Tooltip>
+      {/* Sección de contacto */}
+      <Box sx={{ mb: 2 }}>
+        <Typography variant="h6" sx={{ fontWeight: "bold", letterSpacing: "2px", mb: 1 }}>
+          Contacto
+        </Typography>
+        <Typography variant="body2">11 5409-2819</Typography>
+        <Typography variant="body2" mt={1}>mayaraloboo@gmail.com</Typography>
+      </Box>
 
-       
-      </Button>
-      
-      <Button>
-        <a href="https://www.instagram.com/mayylobo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-          <InstagramIcon sx={{color: "white"}}/>
-        </a>
-      </Button>
+      {/* Línea divisoria sutil */}
+      <Box
+        sx={{
+          width: "60%",
+          height: "1px",
+          backgroundColor: "rgba(255, 255, 255, 0.2)",
+          mb: 2,
+        }}
+      />
 
-      <Button>
-      <a href="https://www.tiktok.com/@mayylobo" target="_blank" rel="noopener noreferrer">
-          <SiTiktok size={20} color="white" />
-        </a>
-      </Button>
+      {/* Derechos reservados */}
+      <Typography variant="caption" sx={{ opacity: 0.7 }}>
+        © {new Date().getFullYear()} Mayara Lobo. Todos los derechos reservados.
+      </Typography>
     </Box>
-
-  </Box>
-  )
-}
+  );
+};

@@ -7,14 +7,11 @@ import {
 } from "@mui/material";
 import DoneIcon from '@mui/icons-material/Done';
 import { useForm, ValidationError } from '@formspree/react';
-import { useNavigate } from "react-router-dom";
 
 export const Contacto = () => {
-    const navigate = useNavigate();
     const [state, handleSubmit] = useForm("mjkrvnrj");
 
     if (state.succeeded) {
-        setTimeout(() => navigate("/inicio"), 3000);
         return (
             <Box
                 sx={{
