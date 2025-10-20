@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"   # Lo que corre Netlify para generar la web
+  publish = "dist"            # Carpeta donde Vite deja los archivos finales
+
+[build.environment]
+  NODE_VERSION = "20"         # Evitamos usar Node 22 porque Vite y Netlify fallan con eso
