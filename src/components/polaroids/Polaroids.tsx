@@ -2,18 +2,19 @@ import { Box, Typography, Fade } from "@mui/material";
 import { useState, useEffect, useRef } from 'react';
 
 const images = [
-    { src: '/public/foto02.jpg' },
-    { src: '/public/foto-06.jpeg' },
-    { src: '/public/foto-08.jpeg' },
-    { src: '/public/foto-10.jpeg' },
-    { src: '/public/foto03.jpg' },
-    { src: '/public/foto-11.jpeg' },
-    { src: '/public/foto-12.jpeg' },
-    { src: '/public/foto-14.jpeg' },
-    { src: '/public/foto01.jpg' },
-    { src: '/public/foto-13.jpeg' },
-    { src: '/public/foto04.jpg' },
+  { src: '/foto02.jpg' },
+  { src: '/foto-06.jpeg' },
+  { src: '/foto-08.jpeg' },
+  { src: '/foto-10.jpeg' },
+  { src: '/foto03.JPG' },
+  { src: '/foto-11.jpeg' },
+  { src: '/foto-12.jpeg' },
+  { src: '/foto-14.jpeg' },
+  { src: '/foto01.JPG' },
+  { src: '/foto-13.jpeg' },
+  { src: '/foto04.jpg' },
 ];
+
 
 interface PolaroidImageProps {
     image: {

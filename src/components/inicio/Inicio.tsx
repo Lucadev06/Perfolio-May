@@ -18,7 +18,7 @@ const isLargeScreen = useMediaQuery('(min-width:1100px)');
       {/* Imagen de fondo */}
       <Box
         component="img"
-        src="/public/principal.jpeg"
+       src="/principal.jpeg"
         alt="principal"
         sx={{
           position: 'absolute',
