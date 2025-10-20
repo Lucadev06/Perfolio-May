@@ -61,8 +61,8 @@ export const Header = () => {
               fontWeight: 700,
               color: "black",
               fontSize: {
-                xs: "2.5rem",
-                sm: "2.8rem",
+                xs: "1.7rem",
+                sm: "2.5rem",
                 md: "3rem",
               },
               lineHeight: 1.2,
