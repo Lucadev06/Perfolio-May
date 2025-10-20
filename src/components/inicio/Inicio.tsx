@@ -19,7 +19,7 @@ export const Inicio = () => {
       {/* Imagen de fondo */}
       <Box
         component="img"
-        src="/public/principal.jpeg"
+        src="/principal.jpeg"
         alt="principal"
         sx={{
           position: 'absolute',
