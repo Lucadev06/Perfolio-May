@@ -1,5 +1,5 @@
 import { Box, Typography, Fade } from "@mui/material";
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const images = [
     { src: '/public/foto02.jpg' },
