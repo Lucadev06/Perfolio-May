@@ -81,12 +81,15 @@ export const Polaroids = () => {
       Me apasionan la fotografía, la moda y expresarme frente a cámara. 
       Empecé a hacer fotos por gusto personal, pero hoy estoy enfocada en crecer de manera profesional.
 
-      {'\n'}📍 <strong>Datos físicos:</strong>
+    
       {'\n'}• Altura: 1,58 m 
       {'\n'}• Peso: 60 kg 
-      {'\n'}• Medidas: 85 – 62 – 92 
-      {'\n'}• Cabello: castaño claro 
-      {'\n'}• Ojos: color miel
+
+ {'\n'}• Busto: 87 cm
+ {'\n'}• Cintura: 73 cm
+ {'\n'}• Cadera: 90 cm
+ 
+   
 
       {'\n'}Actualmente sigo aprendiendo, pero trabajo con dedicación, naturalidad y compromiso en cada proyecto. 
       Estoy abierta a colaborar con fotógrafos, marcas y nuevas propuestas creativas.
